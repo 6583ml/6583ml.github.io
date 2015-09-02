@@ -1,4 +1,4 @@
-var mainRef = new Firebase("https://4tran.firebaseio.com/");
+var mainRef = new Firebase("https://6583ml.firebaseio.com/");
 
 var schoolsRef = mainRef.child("schools");
 
