@@ -21,7 +21,7 @@ $('#locationInput').keypress(function (e) {
     schoolsRef.push({name: name, location: location});
     $('#locationInput').val('');
     $('#nameInput').val('');
-    window.location = 'process.html'
+    window.location = 'http://4tran.ga/process'
   }
 });
 
