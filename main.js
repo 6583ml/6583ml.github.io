@@ -31,6 +31,6 @@ schoolsRef.on('child_added', function(snapshot) {
 });
 
 function displaySchoolArray(name, location) {
-  $('<a href="class-viewer.html" class="list-group-item">').text(name+' - '+location).prepend($('</a>').text(name+': ')).appendTo($('#schoolsDiv'));
+  $('<a class="list-group-item">').text(name+' - '+location).prepend($('</a>').text(name+': ')).appendTo($('#schoolsDiv'));
   $('#schoolsDiv')[0].scrollTop = $('#schoolsDiv')[0].scrollHeight;
 };
