@@ -46,7 +46,6 @@ function dataScan(){
     //NORMAL CHAT
     else {
         sayJson.transaction(function(current_value) {
-            if ($('#textInput').val().indexOf("old") >= 0){$('#textInput').val()="";}
             return current_value + " " + $('#textInput').val();
         });
         $('#textInput').val('');
