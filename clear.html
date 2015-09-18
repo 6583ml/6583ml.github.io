@@ -10,7 +10,7 @@
     <script>
         
         var mainRef = new Firebase("https://6583ml.firebaseio.com/");
-        var sayJson = mainRef.child("sayJson");
+        var sayJson = mainRef.child("say");
         $('#clearSay').click(function() {
             sayJson.set(0);
         });  
