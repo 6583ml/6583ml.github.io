@@ -3,31 +3,21 @@
   <head>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+        p1{font-family: 'Montserrat', sans-serif;font-size: 15px;}
+        p2{font-family: 'Montserrat', sans-serif;font-size: 11px;}
+        p1Color{font-family: 'Montserrat', sans-serif;font-size: 15px;color: blue;}
+        input{font-family: 'Montserrat', sans-serif;font-size: 11px;}
+        button{font-family: 'Montserrat', sans-serif;font-size: 11px;}
+    </style>
   </head>
   <body>
-    <h2 id="displaySay"></h2>
-    <input type='text' id='textInput' placeholder='Text'>
-    <a id="addButton" role="button">Add</a>
-    <script>
-        var mainRef = new Firebase("https://6583ml.firebaseio.com/");
-        var sayJson = mainRef.child("say");
-        sayJson.on('value', function f(s) {
-            $('#displaySay').text(s.val());
-        });
-        $('#addButtone').click(function() {
-            sayJson.transaction(function(current_value) {
-                return current_value + " " + $('#textInput').val();
-            });
-            $('#textInput').val('');
-        });
-        $('#textInput').keypress(function (e) {
-            if (e.keyCode == 13) {
-                sayJson.transaction(function(current_value) {
-                    return current_value + " " + $('#textInput').val();
-                });
-                $('#textInput').val('');
-            }
-        });  
-    </script>
+    <p1>Chat:</p1><br>
+    <p2 id="sayLabel">Loading</p2><br><br>
+    <p1>Admin: <p2 id="levelLabel"></p2></p1><br><br>
+    <input type='text' id='textInput' placeholder=''>
+    <button type="button" id="addButton">ADD</button><br><br>
+    <script src="say.js"></script> 
   </body>
 </html>
