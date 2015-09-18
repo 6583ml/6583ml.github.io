@@ -10,7 +10,7 @@
     <a id="addButton" role="button">Add</a>
     <script>
         var mainRef = new Firebase("https://6583ml.firebaseio.com/");
-        var sayJson = mainRef.child("sayJson");
+        var sayJson = mainRef.child("say");
         sayJson.on('value', function f(s) {
             $('#displaySay').text(s.val());
         });
