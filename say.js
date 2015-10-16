@@ -1,5 +1,6 @@
 var mainRef = new Firebase("https://6583mll.firebaseio.com/");
-var sayJson = mainRef.child("say");
+var frames = mainRef.child("frames");
+var sayJson = frames.child("text");
 var level = 0;
 
 displayLevel();
