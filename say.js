@@ -38,7 +38,7 @@ function dataScan(){
         //IF ADM BUT NO COMMAND
         else {
             sayJson.transaction(function(current_value) {
-                return current_value + " " + $('#textInput').val();
+                return current_value;
             });
             $('#textInput').val('');
         }
@@ -46,7 +46,7 @@ function dataScan(){
     //NORMAL CHAT
     else {
         sayJson.transaction(function(current_value) {
-            return current_value + " " + $('#textInput').val();
+            return current_value;
         });
         $('#textInput').val('');
     }
