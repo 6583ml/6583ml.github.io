@@ -1,4 +1,4 @@
-var mainRef = new Firebase("https://6583ml.firebaseio.com/");
+var mainRef = new Firebase("https://6583mll.firebaseio.com/");
 var sayJson = mainRef.child("say");
 var level = 0;
 
